@@ -13,7 +13,7 @@ app.use(express.json());
 
 // Configure CORS
 app.use(cors({
-  origin: 'https://url-shortener-be-xqje.onrender.com', 
+  origin: ['https://url-shortener-be-xqje.onrender.com', 'https://urls-shortener-fe.netlify.app/'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
