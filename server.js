@@ -12,17 +12,14 @@ connectDB();
 app.use(express.json());
 
 // Configure CORS
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', ['https://url-shortener-be-xqje.onrender.com', 'https://urls-shortener-fe.netlify.app']);
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  
-  if (req.method === 'OPTIONS') {
-    return res.status(200).json({});
-  }
-
-  next();
-});
+app.use(cors({
+  origin: ['http://localhost:3000',
+    'http://localhost:5173',
+    'https://url-shortener-be-xqje.onrender.com',
+    'https://urls-shortener-fe.netlify.app'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 // Define routes
 app.use('/api/users', require('./routes/users')); // User routes
