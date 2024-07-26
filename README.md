@@ -71,3 +71,19 @@ To test your authentication system using Postman, you'll need to follow these st
 3. middleware/auth.js (Authentication Middleware)</br>
 4. routes/users.js (User Routes)</br>
 5. .env (Environment Variables)</br>
+
+
+## Back End Links:
+
+<br><br>
+[GitHub](https://github.com/sshankars1104/url-shortener-BE.git)
+<br><br>
+[Render.com](https://url-shortener-be-xqje.onrender.com)
+<br><br>
+
+## Front End Links
+
+<br><br>
+[GitHub](https://github.com/sshankars1104/url-shortener-FE.git)
+<br><br>
+[Netlify.com](https://urls-shortener-fe.netlify.app)
